@@ -1,0 +1,11 @@
+{
+  "name": "cbt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve -l 5005"
+  },
+  "author": "",
+  "license": "ISC"
+}
