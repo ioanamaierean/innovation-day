@@ -12,13 +12,13 @@ export class ExampleComponent extends React.Component {
     name: "Chris"
   }
 
+  //<button type="submit" className="btn btn-secondary" onClick={onHelloEvt}>Say hello</button>
   render() {
     const { name, onHelloEvt } = this.props;
     return (
       <div className="exampleComponent">
         <img src="/images/react.png" alt="React Logo" className="logo" />
         <p>Hello <strong>{name}</strong> from your friendly React component.</p>
-        <button type="submit" className="btn btn-secondary" onClick={onHelloEvt}>Say hello</button>
       </div>
     )
   }

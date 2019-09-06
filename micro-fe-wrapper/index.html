@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
   <title>Micro-frontends using Web Components</title>
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     .intro {
@@ -45,17 +46,7 @@
         </nav>
       </div>
     </div>
-    <div class="row">
-      <div class="col intro">
-        <p>This is an example of Angular and React components living within the same application using web components. For more information check out the links below:</p>
-        <ul>
-          <li><a href="https://medium.com/@kitson.mac/ui-microservices-reversing-the-anti-pattern-375bc22287b0?source=friends_link&sk=657c5ee99312c933df5832af834588a1" target="_blank">UI microservices — reversing the anti-pattern (micro frontends)</a></li>
-          <li><a href="https://medium.com/javascript-in-plain-english/could-web-components-actually-compliment-javascript-frameworks-5-reasons-why-i-think-so-971eee82ee85?source=friends_link&sk=7044ef2964af32e96173f24ed5b5150e" target="_blank">Five reasons why Web Components could complement JavaScript frameworks</a></li>
-          <li><a href="https://medium.com/@kitson.mac/create-micro-frontends-using-web-components-with-support-for-angular-and-react-2d6db18f557a?source=friends_link&sk=642e86f203d58724d63d9d98aeb11476" target="_blank">Create Micro-frontends using Web Components with support for Angular and React</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
+    <!--<div class="row">
       <div class="col">
           <div class="alert alert-info" role="alert">
             <h4 class="alert-heading">What is your name?</h4>
@@ -66,7 +57,7 @@
             <button type="submit" class="btn btn-primary" onclick="tellComponents()">Tell the components</button>
           </div>
       </div>
-    </div>
+    </div>-->
     <div class="row">
       <div class="col">
         <div class="card">
@@ -80,16 +71,16 @@
           <div class="card-body" id="react-container"></div>
         </div>
       </div>
-    </div>
-    <div class="row">
       <div class="col">
         <div class="card">
-          <h5 class="card-header">CBT</h5>
-          <div class="card-body" id="cbt-container"></div>
+          <h5 class="card-header">Spine</h5>
+          <div class="card-body" id="cbt-container11">
+            <custom-el id="customElId"></custom-el>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row console">
+    <!--<div class="row console">
       <div class="col">
           <div class="alert alert-dark" role="alert">
             <h4 class="alert-heading">Console</h4>
@@ -101,12 +92,12 @@
       <div class="repo">
         <a href="https://github.com/chriskitson/micro-frontends-with-web-components" target="_blank">View this code repository on github</a>.
       </div>
-    </div>
+    </div>-->
   </div>
 
   <script>
     function tellComponents() {
-      const name = document.getElementById('yourName').value;
+      const name = "Innovation Team";
 
       const reactEl = document.createElement('react-el');
       reactEl.setAttribute('name', name);
@@ -130,7 +121,7 @@
       }
       ngElContainer.appendChild(ngEl);
 
-      const cbtEl = document.createElement('cbt-el');
+      /*const cbtEl = document.createElement('cbt-el');
       cbtEl.setAttribute('name', name);
       cbtEl.setAttribute('onHelloEvt', 'onHelloEvt');
       cbtEl.addEventListener('onHelloEvt', (e) => helloEvent('vvv'));
@@ -139,7 +130,19 @@
       if (cbtElContainer.children.length > 0) {
         cbtElContainer.removeChild(cbtElContainer.children[0]);
       }
-      cbtElContainer.appendChild(cbtEl);
+      cbtElContainer.appendChild(cbtEl);*/
+
+        /*const cbtEl = document.createElement('custom-el');
+        cbtEl.setAttribute('id', "customElId");
+        cbtEl.setAttribute('name', name);
+        cbtEl.setAttribute('onHelloEvt', 'onHelloEvt');
+        cbtEl.addEventListener('onHelloEvt', (e) => helloEvent('vvv'));
+
+        const cbtElContainer =  document.getElementById('cbt-container');
+        if (cbtElContainer.children.length > 0) {
+            cbtElContainer.removeChild(cbtElContainer.children[0]);
+        }
+        cbtElContainer.appendChild(cbtEl);*/
 
       logMessage('You', `my name is ${name}`)
 
@@ -159,6 +162,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
   <script src="http://localhost:5001/main.js"></script>
   <script src="http://localhost:5002/main.js"></script>
-  <script src="http://localhost:5005/main.js"></script>
+  <script src="http://localhost:5010/dist/bundle.js"></script>
 </body>
 </html>
