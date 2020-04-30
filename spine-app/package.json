@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "jade": "^1.11.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "pug": "^2.0.4",
     "spine": "~1.6.1",
     "stylus": "~0.52.0",
