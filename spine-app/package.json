@@ -4,7 +4,7 @@
   "dependencies": {
     "jade": "^1.11.0",
     "jquery": "^3.3.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "spine": "~1.6.1",
     "stylus": "~0.52.0",
     "webpack": "^4.39.3"
